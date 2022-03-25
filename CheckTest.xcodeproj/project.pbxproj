@@ -56,15 +56,63 @@
 		DECD733827EE53C000547C62 /* CheckTest */ = {
 			isa = PBXGroup;
 			children = (
-				DECD733927EE53C000547C62 /* AppDelegate.swift */,
-				DECD733B27EE53C000547C62 /* SceneDelegate.swift */,
-				DECD733D27EE53C000547C62 /* ViewController.swift */,
-				DECD733F27EE53C000547C62 /* Main.storyboard */,
-				DECD734227EE53C100547C62 /* Assets.xcassets */,
-				DECD734427EE53C100547C62 /* LaunchScreen.storyboard */,
-				DECD734727EE53C100547C62 /* Info.plist */,
+				DECD734D27EE544800547C62 /* Storyboars */,
+				DECD734E27EE546500547C62 /* ViewControllers */,
+				DECD735127EE549900547C62 /* Models */,
+				DECD735227EE55C500547C62 /* Services */,
+				DECD735027EE548100547C62 /* Resources */,
+				DECD734F27EE547900547C62 /* App */,
 			);
 			path = CheckTest;
+			sourceTree = "<group>";
+		};
+		DECD734D27EE544800547C62 /* Storyboars */ = {
+			isa = PBXGroup;
+			children = (
+				DECD733F27EE53C000547C62 /* Main.storyboard */,
+				DECD734427EE53C100547C62 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboars;
+			sourceTree = "<group>";
+		};
+		DECD734E27EE546500547C62 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DECD733D27EE53C000547C62 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DECD734F27EE547900547C62 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DECD733927EE53C000547C62 /* AppDelegate.swift */,
+				DECD733B27EE53C000547C62 /* SceneDelegate.swift */,
+				DECD734727EE53C100547C62 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DECD735027EE548100547C62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DECD734227EE53C100547C62 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DECD735127EE549900547C62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DECD735227EE55C500547C62 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,22 +337,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQR6Z6TTBT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CheckTest/Info.plist;
+				INFOPLIST_FILE = CheckTest/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.StGeAr.CheckTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,22 +365,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQR6Z6TTBT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CheckTest/Info.plist;
+				INFOPLIST_FILE = CheckTest/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.StGeAr.CheckTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
