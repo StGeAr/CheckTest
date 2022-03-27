@@ -84,8 +84,6 @@
 		DECD734E27EE546500547C62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D7C694C27F06EC800FFD652 /* Question.swift */,
-				5D7C694E27F06EEC00FFD652 /* DataManager.swift */,
 				DECD733D27EE53C000547C62 /* ViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
 			);
@@ -113,6 +111,7 @@
 		DECD735127EE549900547C62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D7C694C27F06EC800FFD652 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,6 +119,7 @@
 		DECD735227EE55C500547C62 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D7C694E27F06EEC00FFD652 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
