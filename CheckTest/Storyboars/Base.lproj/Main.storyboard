@@ -174,7 +174,6 @@
         <!--Question №-->
         <scene sceneID="aRr-wV-gwL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYu-bS-TgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="cU9-Or-rfo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHf-fs-K45">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -238,6 +237,7 @@
                         <segue destination="aN3-Zf-IRi" kind="show" identifier="showResult" id="Et7-SH-zIP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYu-bS-TgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2511" y="536"/>
         </scene>
@@ -297,7 +297,7 @@
         <!--Correct answers-->
         <scene sceneID="ROA-qw-jbF">
             <objects>
-                <tableViewController id="GVI-pE-GAP" sceneMemberID="viewController">
+                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersViewController.swift" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KcW-fc-AJL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +345,6 @@
         <!--Settings-->
         <scene sceneID="Tj9-r0-DdU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CWY-Gz-bkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="scC-5o-MSS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oLY-4Z-ICE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -368,13 +367,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="tyC-p9-Yrm"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWY-Gz-bkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544" y="-538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aBZ-Pj-Ltv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAQ-lm-ZAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="kMp-Ej-ekN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RD7-PH-tp4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6Pm-G6-C6B">
@@ -385,6 +384,7 @@
                         <segue destination="scC-5o-MSS" kind="relationship" relationship="rootViewController" id="Rqx-xF-Hvp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAQ-lm-ZAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1738" y="-539"/>
         </scene>
@@ -409,7 +409,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Jd8-UI-KsB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-sp-uGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GuB-d5-a8a" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vqd-ef-6dx">
@@ -421,6 +420,7 @@
                         <segue destination="cU9-Or-rfo" kind="relationship" relationship="rootViewController" id="fvH-W2-0Qw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-sp-uGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736" y="536"/>
         </scene>
