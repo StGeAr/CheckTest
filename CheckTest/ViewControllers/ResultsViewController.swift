@@ -20,10 +20,20 @@ class ResultsViewController: UIViewController {
 //    let correctAnswers = Question.getCorrectResults()
 //    var currentAnswers: [Answer]!
     
-    let correctAnswers: Set =  ["3", "9", "70", "megan", "лось"]
-    let currentAnswers: Set = ["3", "9", "20", "hgfvjb", "лось"]
+    let correctAnswers: [String] =  ["3", "9", "70", "megan", "лось"]
+    let currentAnswers: [String] = ["3", "9", "20", "hgfvjb", "лось"]
     
-    private let incorrectAnswers: [String] = [] 
+    private var incorrectAnsweredQuestions: [Int] {
+        var questionNumber: [Int] = []
+        for currentAnswer in currentAnswers {
+            if !correctAnswers.contains(currentAnswer) {
+                if let index = currentAnswers.firstIndex(of: currentAnswer) {
+                    questionNumber.append(index)
+                }
+            }
+        }
+        return questionNumber
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +43,17 @@ class ResultsViewController: UIViewController {
     
     // MARK: - Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let navigationVC = segue.destination as? UINavigationController else { return }
-//        guard let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController else { return }
-//        correctAnswersVC.answers = incorrectAnswers
+//        guard
+//            let navigationVC = segue.destination as? UINavigationController
+//        else {
+//            return
+//        }
+//        guard
+//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
+//        else {
+//            return
+//        }
+//            correctAnswersVC.answers = incorrectAnsweredQuestions
 //    }
         
     private func updateResultInfo() {
