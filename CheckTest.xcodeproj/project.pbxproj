@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7C694727F069F900FFD652 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694627F069F900FFD652 /* DataManager.swift */; };
+		5D7C694927F06A3B00FFD652 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694827F06A3B00FFD652 /* Question.swift */; };
 		DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733927EE53C000547C62 /* AppDelegate.swift */; };
 		DECD733C27EE53C000547C62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733B27EE53C000547C62 /* SceneDelegate.swift */; };
 		DECD733E27EE53C000547C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733D27EE53C000547C62 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D7C694627F069F900FFD652 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = "../../../../Downloads/Lesson 2.08/HW 7/DataManager.swift"; sourceTree = "<group>"; };
+		5D7C694827F06A3B00FFD652 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Question.swift; path = "../../../../Downloads/Lesson 2.08/HW 7/Question.swift"; sourceTree = "<group>"; };
 		DECD733627EE53C000547C62 /* CheckTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECD733927EE53C000547C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DECD733B27EE53C000547C62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		DECD735127EE549900547C62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D7C694827F06A3B00FFD652 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		DECD735227EE55C500547C62 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D7C694627F069F900FFD652 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,7 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7C694927F06A3B00FFD652 /* Question.swift in Sources */,
 				DECD733E27EE53C000547C62 /* ViewController.swift in Sources */,
+				5D7C694727F069F900FFD652 /* DataManager.swift in Sources */,
 				DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */,
 				DECD733C27EE53C000547C62 /* SceneDelegate.swift in Sources */,
 			);
