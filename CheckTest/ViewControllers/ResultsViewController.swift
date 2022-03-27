@@ -20,10 +20,10 @@ class ResultsViewController: UIViewController {
 //    let correctAnswers = Question.getCorrectResults()
 //    var currentAnswers: [Answer]!
     
-    let correctAnswers = ["3", "9", "70", "megan", "лось"]
-    let currentAnswers = ["3", "9", "70", "1", "лось"]
+    let correctAnswers: Set =  ["3", "9", "70", "megan", "лось"]
+    let currentAnswers: Set = ["3", "9", "20", "hgfvjb", "лось"]
     
-    private let incorrectAnswers: [String] = []
+    private let incorrectAnswers: [String] = [] 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +43,18 @@ class ResultsViewController: UIViewController {
             resultTypeLabel.text = "Поздравляем! Вы ответили на все вопросы!"
             resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
         } else {
+            var answers: [String] = []
+            
+            for currentAnswer in currentAnswers {
+                if correctAnswers.contains(currentAnswer) {
+                    answers.append(currentAnswer)
+                }
+            }
+            
             resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
-            resultNumberLabel.text = "Верно <> из \(correctAnswers.count)"
+            resultNumberLabel.text = "Верно \(answers.count) из \(correctAnswers.count)"
             correctAnswersButton.isHidden = false
         }
     }
+    
 }
