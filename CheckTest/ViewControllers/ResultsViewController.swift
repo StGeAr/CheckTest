@@ -45,6 +45,7 @@ class ResultsViewController: UIViewController {
         } else {
             resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
             resultNumberLabel.text = "Верно <> из \(correctAnswers.count)"
+            correctAnswersButton.isHidden = false
         }
     }
 }
