@@ -15,6 +15,7 @@
 		DECD734127EE53C000547C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD733F27EE53C000547C62 /* Main.storyboard */; };
 		DECD734327EE53C100547C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DECD734227EE53C100547C62 /* Assets.xcassets */; };
 		DECD734627EE53C100547C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD734427EE53C100547C62 /* LaunchScreen.storyboard */; };
+		DEF14E4227F07D9200B949E9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF14E4127F07D9200B949E9 /* ResultsViewController.swift */; };
 		ED5836E127F06AB00082FD8F /* RightAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		DECD734227EE53C100547C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DECD734527EE53C100547C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DECD734727EE53C100547C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF14E4127F07D9200B949E9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,9 +86,10 @@
 		DECD734E27EE546500547C62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DECD733D27EE53C000547C62 /* ViewController.swift */,
 				5D7C694C27F06EC800FFD652 /* Question.swift */,
 				5D7C694E27F06EEC00FFD652 /* DataManager.swift */,
-				DECD733D27EE53C000547C62 /* ViewController.swift */,
+				DEF14E4127F07D9200B949E9 /* ResultsViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
 			);
 			path = ViewControllers;
@@ -198,6 +201,7 @@
 				DECD733E27EE53C000547C62 /* ViewController.swift in Sources */,
 				5D7C694F27F06EEC00FFD652 /* DataManager.swift in Sources */,
 				5D7C694D27F06EC800FFD652 /* Question.swift in Sources */,
+				DEF14E4227F07D9200B949E9 /* ResultsViewController.swift in Sources */,
 				DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */,
 				ED5836E127F06AB00082FD8F /* RightAnswersViewController.swift in Sources */,
 				DECD733C27EE53C000547C62 /* SceneDelegate.swift in Sources */,
