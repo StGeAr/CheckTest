@@ -17,12 +17,15 @@ class ResultsViewController: UIViewController {
         }
     }
     
+//    // MARK: - Это то что я планирую принимать
 //    let correctAnswers = Question.getCorrectResults()
 //    var currentAnswers: [Answer]!
     
-    let correctAnswers: [String] =  ["3", "9", "70", "megan", "лось"]
-    let currentAnswers: [String] = ["3", "9", "20", "hgfvjb", "лось"]
+    // MARK: - Это костыль, просто создал массивы чтобы проверить работу приложения
+    let correctAnswers: [String] =  ["3", "9", "70", "заяц", "лось"]
+    let currentAnswers: [String] = ["3", "9", "20", "кошка", "лось"]
     
+    // MARK: - Этот геттер я отправлять буду Кириллу
     private var incorrectAnsweredQuestions: [Int] {
         var questionNumber: [Int] = []
         for currentAnswer in currentAnswers {
@@ -41,7 +44,7 @@ class ResultsViewController: UIViewController {
         updateResultInfo()
     }
     
-    // MARK: - Navigation
+//    // MARK: - Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard
 //            let navigationVC = segue.destination as? UINavigationController
