@@ -21,8 +21,9 @@ class ResultsViewController: UIViewController {
 //    var currentAnswers: [Answer]!
     
     let correctAnswers = ["3", "9", "70", "megan", "лось"]
-    let currentAnswers = ["3", "9", "70", "megan", "лось"]
+    let currentAnswers = ["3", "9", "70", "1", "лось"]
     
+    private let incorrectAnswers: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,11 @@ class ResultsViewController: UIViewController {
         updateResultInfo()
     }
     
-//    // MARK: - Navigation
+    // MARK: - Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
+//        guard let navigationVC = segue.destination as? UINavigationController else { return }
+//        guard let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController else { return }
+//        correctAnswersVC.answers = incorrectAnswers
 //    }
         
     private func updateResultInfo() {
@@ -41,7 +44,7 @@ class ResultsViewController: UIViewController {
             resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
         } else {
             resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
-            resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
+            resultNumberLabel.text = "Верно <> из \(correctAnswers.count)"
         }
     }
 }
