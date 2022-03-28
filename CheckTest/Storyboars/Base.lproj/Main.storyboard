@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="2511" y="536"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="zrW-6A-u2R">
             <objects>
-                <viewController id="aN3-Zf-IRi" sceneMemberID="viewController">
+                <viewController id="aN3-Zf-IRi" customClass="ResultsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nL-Tm-KZy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,6 +289,11 @@
                     <navigationItem key="navigationItem" id="RfP-Nc-Irc">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="MIq-Dm-LWa"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="correctAnswersButton" destination="HVv-hh-iHM" id="smB-If-Ydm"/>
+                        <outlet property="resultNumberLabel" destination="7hO-WK-IeG" id="CgA-cx-Npy"/>
+                        <outlet property="resultTypeLabel" destination="bke-1N-BQT" id="SVp-UX-llg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tws-Dy-3Ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
