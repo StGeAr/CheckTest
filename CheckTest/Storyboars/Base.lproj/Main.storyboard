@@ -174,8 +174,7 @@
         <!--Question №-->
         <scene sceneID="aRr-wV-gwL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYu-bS-TgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="cU9-Or-rfo" sceneMemberID="viewController">
+                <viewController id="cU9-Or-rfo" customClass="QuestionsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHf-fs-K45">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,16 +198,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="D5X-Ai-Yd2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-mV-s2x">
                                                 <rect key="frame" x="0.0" y="55" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="m3k-4X-fPd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-ng-xB8">
                                                 <rect key="frame" x="0.0" y="110" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="hcg-Zw-WR6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -235,16 +243,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="questionLabel" destination="pFM-zg-nb4" id="FwA-90-2Vp"/>
+                        <outlet property="questionProgressLine" destination="Mnd-pq-YDI" id="ncf-cg-Ooe"/>
+                        <outletCollection property="buttons" destination="dWP-qD-Ekw" collectionClass="NSMutableArray" id="pIg-RB-pSz"/>
+                        <outletCollection property="buttons" destination="I2Q-mV-s2x" collectionClass="NSMutableArray" id="iTd-c5-fTy"/>
+                        <outletCollection property="buttons" destination="1eO-ng-xB8" collectionClass="NSMutableArray" id="sbv-Hk-G0c"/>
                         <segue destination="aN3-Zf-IRi" kind="show" identifier="showResult" id="Et7-SH-zIP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYu-bS-TgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2511" y="536"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="zrW-6A-u2R">
             <objects>
-                <viewController id="aN3-Zf-IRi" sceneMemberID="viewController">
+                <viewController id="aN3-Zf-IRi" customClass="ResultsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nL-Tm-KZy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,6 +303,11 @@
                     <navigationItem key="navigationItem" id="RfP-Nc-Irc">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="MIq-Dm-LWa"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="correctAnswersButton" destination="HVv-hh-iHM" id="smB-If-Ydm"/>
+                        <outlet property="resultNumberLabel" destination="7hO-WK-IeG" id="CgA-cx-Npy"/>
+                        <outlet property="resultTypeLabel" destination="bke-1N-BQT" id="SVp-UX-llg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tws-Dy-3Ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,7 +316,7 @@
         <!--Correct answers-->
         <scene sceneID="ROA-qw-jbF">
             <objects>
-                <tableViewController id="GVI-pE-GAP" sceneMemberID="viewController">
+                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersViewController.swift" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KcW-fc-AJL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +364,6 @@
         <!--Settings-->
         <scene sceneID="Tj9-r0-DdU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CWY-Gz-bkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="scC-5o-MSS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oLY-4Z-ICE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -368,13 +386,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="tyC-p9-Yrm"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWY-Gz-bkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544" y="-538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aBZ-Pj-Ltv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAQ-lm-ZAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="kMp-Ej-ekN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RD7-PH-tp4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6Pm-G6-C6B">
@@ -385,6 +403,7 @@
                         <segue destination="scC-5o-MSS" kind="relationship" relationship="rootViewController" id="Rqx-xF-Hvp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAQ-lm-ZAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1738" y="-539"/>
         </scene>
@@ -409,7 +428,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Jd8-UI-KsB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-sp-uGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GuB-d5-a8a" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vqd-ef-6dx">
@@ -421,6 +439,7 @@
                         <segue destination="cU9-Or-rfo" kind="relationship" relationship="rootViewController" id="fvH-W2-0Qw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-sp-uGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736" y="536"/>
         </scene>
