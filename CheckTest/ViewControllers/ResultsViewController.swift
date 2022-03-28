@@ -9,6 +9,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet var resultTypeLabel: UILabel!
     @IBOutlet var resultNumberLabel: UILabel!
     @IBOutlet var correctAnswersButton: UIButton! {
@@ -17,23 +18,21 @@ class ResultsViewController: UIViewController {
         }
     }
     
-//    // MARK: - Это то что я планирую принимать
-//    var currentAnswers: [Answer]!
-//    var correctAnswers: [String] {
-//        let questions = Question.getQuestion()
-//        var answers: [String] = []
-//        for index in 0..<questions.count {
-//            answers.append(questions[index].correctAnswer)
-//        }
-//        return answers
-//    }
+    //MARK: - Public properties
+    var answersChosen: [Answer]!
     
-    // MARK: - Это костыль, просто создал массивы чтобы проверить работу приложения
-    let correctAnswers: [String] =  ["3", "9", "70", "заяц", "лось"]
-    let currentAnswers: [String] = ["3", "9", "20", "кошка", "лось"]
+    //MARK: - Private properties
+    private var correctAnswers: [String] {
+        let questions = Question.getQuestion()
+        var answers: [String] = []
+        for index in 0..<questions.count {
+            answers.append(questions[index].correctAnswer)
+        }
+        return answers
+    }
     
-    // MARK: - Этот геттер я отправлять буду Кириллу
     private var incorrectAnsweredQuestions: [Int] {
+        let currentAnswers = answersChosen.map { $0.title }
         var questionNumber: [Int] = []
         for currentAnswer in currentAnswers {
             if !correctAnswers.contains(currentAnswer) {
@@ -44,45 +43,51 @@ class ResultsViewController: UIViewController {
         }
         return questionNumber
     }
-    
+
+    //MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         updateResultInfo()
     }
-    
-//    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard
-//            let navigationVC = segue.destination as? UINavigationController
-//        else {
-//            return
-//        }
-//        guard
-//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
-//        else {
-//            return
-//        }
-//            correctAnswersVC.answers = incorrectAnsweredQuestions
-//    }
-        
+}
+
+//MARK: - Private methods
+extension ResultsViewController {
     private func updateResultInfo() {
+        let currentAnswers = answersChosen.compactMap { $0.title }
         if currentAnswers == correctAnswers {
             resultTypeLabel.text = "Поздравляем! Вы ответили на все вопросы!"
             resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
         } else {
             var answers: [String] = []
-            
+
             for currentAnswer in currentAnswers {
                 if correctAnswers.contains(currentAnswer) {
                     answers.append(currentAnswer)
                 }
             }
-            
+
             resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
             resultNumberLabel.text = "Верно \(answers.count) из \(correctAnswers.count)"
             correctAnswersButton.isHidden = false
         }
     }
+}
 
+// MARK: - Navigation
+extension ResultsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let navigationVC = segue.destination as? UINavigationController
+        else {
+            return
+        }
+        guard
+            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
+        else {
+            return
+        }
+            correctAnswersVC.answers = incorrectAnsweredQuestions
+    }
 }
