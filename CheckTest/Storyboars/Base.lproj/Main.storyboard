@@ -244,6 +244,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="questionLabel" destination="pFM-zg-nb4" id="FwA-90-2Vp"/>
+                        <outlet property="questionProgressLine" destination="Mnd-pq-YDI" id="ncf-cg-Ooe"/>
                         <outletCollection property="buttons" destination="dWP-qD-Ekw" collectionClass="NSMutableArray" id="pIg-RB-pSz"/>
                         <outletCollection property="buttons" destination="I2Q-mV-s2x" collectionClass="NSMutableArray" id="iTd-c5-fTy"/>
                         <outletCollection property="buttons" destination="1eO-ng-xB8" collectionClass="NSMutableArray" id="sbv-Hk-G0c"/>
