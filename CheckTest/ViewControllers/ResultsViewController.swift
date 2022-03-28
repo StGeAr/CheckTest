@@ -17,8 +17,11 @@ class ResultsViewController: UIViewController {
         }
     }
 
+    //MARK: - Public properties
     var answersChosen: [Answer]!
-    var correctAnswers: [String] {
+    
+    //MARK: - Private properties
+    private var correctAnswers: [String] {
         let questions = Question.getQuestion()
         var answers: [String] = []
         for index in 0..<questions.count {
@@ -27,7 +30,6 @@ class ResultsViewController: UIViewController {
         return answers
     }
     
-    // MARK: - Этот геттер я отправлять буду Кириллу
     private var incorrectAnsweredQuestions: [Int] {
         let currentAnswers = answersChosen.map { $0.title }
         var questionNumber: [Int] = []
@@ -41,27 +43,16 @@ class ResultsViewController: UIViewController {
         return questionNumber
     }
 
+    //MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         updateResultInfo()
     }
+}
 
-    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard
-//            let navigationVC = segue.destination as? UINavigationController
-//        else {
-//            return
-//        }
-//        guard
-//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
-//        else {
-//            return
-//        }
-//            correctAnswersVC.answers = incorrectAnsweredQuestions
-//    }
-
+//MARK: - Private methods
+extension ResultsViewController {
     private func updateResultInfo() {
         let currentAnswers = answersChosen.compactMap { $0.title }
         if currentAnswers == correctAnswers {
@@ -82,3 +73,20 @@ class ResultsViewController: UIViewController {
         }
     }
 }
+
+// MARK: - Navigation
+//extension ResultsViewController {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard
+//            let navigationVC = segue.destination as? UINavigationController
+//        else {
+//            return
+//        }
+//        guard
+//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
+//        else {
+//            return
+//        }
+//            correctAnswersVC.answers = incorrectAnsweredQuestions
+//    }
+//}
