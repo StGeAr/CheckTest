@@ -16,15 +16,17 @@ class ResultsViewController: UIViewController {
             correctAnswersButton.isHidden = true
         }
     }
-    
-//    // MARK: - Это то что я планирую принимать
-//    let correctAnswers = Question.getCorrectResults()
-//    var currentAnswers: [Answer]!
-    
-    // MARK: - Это костыль, просто создал массивы чтобы проверить работу приложения
-    let correctAnswers: [String] =  ["3", "9", "70", "заяц", "лось"]
-    let currentAnswers: [String] = ["3", "9", "20", "кошка", "лось"]
-    
+
+    var currentAnswers: [String]!
+    var correctAnswers: [String] {
+        let questions = Question.getQuestion()
+        var answers: [String] = []
+        for index in 0..<questions.count {
+            answers.append(questions[index].correctAnswer)
+        }
+        return answers
+    }
+
     // MARK: - Этот геттер я отправлять буду Кириллу
     private var incorrectAnsweredQuestions: [Int] {
         var questionNumber: [Int] = []
@@ -37,7 +39,7 @@ class ResultsViewController: UIViewController {
         }
         return questionNumber
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true

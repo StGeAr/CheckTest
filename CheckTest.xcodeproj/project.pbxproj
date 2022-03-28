@@ -89,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				DECD733D27EE53C000547C62 /* ViewController.swift */,
+				0A9E6D0327F08AEA00DBF239 /* QuestionsViewController.swift */,
 				DEFFE59527F24542008AA3CC /* ResultsViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
-				0A9E6D0327F08AEA00DBF239 /* QuestionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
