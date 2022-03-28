@@ -174,7 +174,7 @@
         <!--Question №-->
         <scene sceneID="aRr-wV-gwL">
             <objects>
-                <viewController id="cU9-Or-rfo" sceneMemberID="viewController">
+                <viewController id="cU9-Or-rfo" customClass="QuestionsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHf-fs-K45">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,16 +198,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="D5X-Ai-Yd2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-mV-s2x">
                                                 <rect key="frame" x="0.0" y="55" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="m3k-4X-fPd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-ng-xB8">
                                                 <rect key="frame" x="0.0" y="110" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="hcg-Zw-WR6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -234,6 +243,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="questionLabel" destination="pFM-zg-nb4" id="FwA-90-2Vp"/>
+                        <outletCollection property="buttons" destination="dWP-qD-Ekw" collectionClass="NSMutableArray" id="pIg-RB-pSz"/>
+                        <outletCollection property="buttons" destination="I2Q-mV-s2x" collectionClass="NSMutableArray" id="iTd-c5-fTy"/>
+                        <outletCollection property="buttons" destination="1eO-ng-xB8" collectionClass="NSMutableArray" id="sbv-Hk-G0c"/>
                         <segue destination="aN3-Zf-IRi" kind="show" identifier="showResult" id="Et7-SH-zIP"/>
                     </connections>
                 </viewController>
