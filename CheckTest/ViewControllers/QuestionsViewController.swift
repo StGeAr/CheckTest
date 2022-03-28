@@ -9,10 +9,12 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressLine: UIProgressView!
     
+    //MARK: - Private properties
     private let questions = Question.getQuestion()
     private var questionIndex = 0
     private var answersChosen: [Answer] = []
@@ -20,16 +22,13 @@ class QuestionsViewController: UIViewController {
         questions[questionIndex].answers
     }
     
+    //MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let resultVC = segue.destination as? ResultsViewController else { return }
-        resultVC.answersChosen = answersChosen
-    }
-    
+    // MARK: - IBActions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         guard let currentIndex = buttons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[currentIndex]
@@ -38,6 +37,7 @@ class QuestionsViewController: UIViewController {
     }
 }
 
+//MARK: - Private methods
 extension QuestionsViewController {
     private func updateUI() {
         let currentQuestion = questions[questionIndex]
@@ -61,5 +61,13 @@ extension QuestionsViewController {
             return
         }
         performSegue(withIdentifier: "showResult", sender: nil)
+    }
+}
+
+// MARK: - Navigation
+extension QuestionsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultsViewController else { return }
+        resultVC.answersChosen = answersChosen
     }
 }

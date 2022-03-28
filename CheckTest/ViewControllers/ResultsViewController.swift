@@ -8,7 +8,8 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
+    //MARK: - IBOutlets
     @IBOutlet var resultTypeLabel: UILabel!
     @IBOutlet var resultNumberLabel: UILabel!
     @IBOutlet var correctAnswersButton: UIButton! {
