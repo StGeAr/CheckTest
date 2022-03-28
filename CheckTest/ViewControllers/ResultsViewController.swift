@@ -28,18 +28,18 @@ class ResultsViewController: UIViewController {
     }
     
     // MARK: - Этот геттер я отправлять буду Кириллу
-//    private var incorrectAnsweredQuestions: [Int] {
-//        let currentAnswers = answersChosen.map { $0.title }
-//        var questionNumber: [Int] = []
-//        for currentAnswer in currentAnswers {
-//            if !correctAnswers.contains(currentAnswer) {
-//                if let index = currentAnswers.firstIndex(of: currentAnswer) {
-//                    questionNumber.append(index)
-//                }
-//            }
-//        }
-//        return questionNumber
-//    }
+    private var incorrectAnsweredQuestions: [Int] {
+        let currentAnswers = answersChosen.map { $0.title }
+        var questionNumber: [Int] = []
+        for currentAnswer in currentAnswers {
+            if !correctAnswers.contains(currentAnswer) {
+                if let index = currentAnswers.firstIndex(of: currentAnswer) {
+                    questionNumber.append(index)
+                }
+            }
+        }
+        return questionNumber
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
