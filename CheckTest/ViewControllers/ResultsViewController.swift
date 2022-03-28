@@ -18,8 +18,15 @@ class ResultsViewController: UIViewController {
     }
     
 //    // MARK: - Это то что я планирую принимать
-//    let correctAnswers = Question.getCorrectResults()
 //    var currentAnswers: [Answer]!
+//    var correctAnswers: [String] {
+//        let questions = Question.getQuestion()
+//        var answers: [String] = []
+//        for index in 0..<questions.count {
+//            answers.append(questions[index].correctAnswer)
+//        }
+//        return answers
+//    }
     
     // MARK: - Это костыль, просто создал массивы чтобы проверить работу приложения
     let correctAnswers: [String] =  ["3", "9", "70", "заяц", "лось"]
