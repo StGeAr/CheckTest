@@ -25,13 +25,14 @@ class ResultsViewController: UIViewController {
     private var correctAnswers: [String] {
         let questions = Question.getQuestion()
         var answers: [String] = []
-        for index in 0..<questions.count {
-            answers.append(questions[index].correctAnswer)
+        
+        for question in questions {
+            answers.append(question.correctAnswer)
         }
         return answers
     }
     
-    private var incorrectAnsweredQuestions: [Int] {
+    private var incorrectAnsweredQuestionNumbers: [Int] {
         let currentAnswers = answersChosen.map { $0.title }
         var questionNumber: [Int] = []
         for currentAnswer in currentAnswers {
@@ -76,18 +77,18 @@ extension ResultsViewController {
 }
 
 // MARK: - Navigation
-//extension ResultsViewController {
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard
-//            let navigationVC = segue.destination as? UINavigationController
-//        else {
-//            return
-//        }
-//        guard
-//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
-//        else {
-//            return
-//        }
-//            correctAnswersVC.answers = incorrectAnsweredQuestions
-//    }
-//}
+extension ResultsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let navigationVC = segue.destination as? UINavigationController
+        else {
+            return
+        }
+        guard
+            let correctAnswersVC = navigationVC.topViewController as? CorrectAnswerViewController
+        else {
+            return
+        }
+            correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestionNumbers
+    }
+}
