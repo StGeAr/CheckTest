@@ -9,31 +9,19 @@ import UIKit
 
 class CorrectAnswerViewController: UITableViewController {
 
-    let someArray = [0, 3, 4]
-    var answers: [Int]!
+    //MARK: - Public properties
+    var incorrectAnsweredQuestionNumbers: [Int]!
+    let questions = Question.getQuestion()
     
-    
-    let numbers = ["Вопроос П-1", "Вопроос П-2", "Вопроос П-3", "Вопроос П-4"]
-    
-    let questions = ["Что не входит в состав блока тормозного оборудования (БТО)?", "Какой вентиль включает в работу кран машиниста?", "Какой вентиль включает в работу тормоз от АРС?", "Какой вентиль предназначен для отжатия башмаков токоприёмников?"]
-    
-    let correctAnswers = ["Вентиль В-7", "В-4", "В-6", "В-1"]
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(answers ?? "")
-
-    }
-
+    //MARK: - Life cycles methods
     override func numberOfSections(in tableView: UITableView) -> Int {
-        someArray.count
+        incorrectAnsweredQuestionNumbers.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        numbers[section]
-            }
+        let questionNumber = incorrectAnsweredQuestionNumbers[section] + 1
+        return "Вопрос №\(questionNumber)"
+    }
         
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
@@ -42,22 +30,19 @@ class CorrectAnswerViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showCorrectAnswers", for: indexPath)
         
-        
         let question = questions[indexPath.section]
-        let correctAnswer = correctAnswers[indexPath.section]
+        
         var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {
         case 0:
-            content.text = question
+            content.text = question.title
         default:
-            content.text = correctAnswer
+            content.text = "Правильный ответ: \(question.correctAnswer)"
         }
         
         cell.contentConfiguration = content
                 
         return cell
     }
-
-
 }
