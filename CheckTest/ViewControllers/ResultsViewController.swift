@@ -25,13 +25,14 @@ class ResultsViewController: UIViewController {
     private var correctAnswers: [String] {
         let questions = Question.getQuestion()
         var answers: [String] = []
-        for index in 0..<questions.count {
-            answers.append(questions[index].correctAnswer)
+        
+        for question in questions {
+            answers.append(question.correctAnswer)
         }
         return answers
     }
     
-    private var incorrectAnsweredQuestions: [Int] {
+    private var incorrectAnsweredQuestionNumbers: [Int] {
         let currentAnswers = answersChosen.map { $0.title }
         var questionNumber: [Int] = []
         for currentAnswer in currentAnswers {
@@ -88,6 +89,6 @@ extension ResultsViewController {
         else {
             return
         }
-            correctAnswersVC.answers = incorrectAnsweredQuestions
+            correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestions
     }
 }
