@@ -76,18 +76,18 @@ extension ResultsViewController {
 }
 
 // MARK: - Navigation
-//extension ResultsViewController {
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard
-//            let navigationVC = segue.destination as? UINavigationController
-//        else {
-//            return
-//        }
-//        guard
-//            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
-//        else {
-//            return
-//        }
-//            correctAnswersVC.answers = incorrectAnsweredQuestions
-//    }
-//}
+extension ResultsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let navigationVC = segue.destination as? UINavigationController
+        else {
+            return
+        }
+        guard
+            let correctAnswersVC = navigationVC.topViewController as? CorrectAnswerViewController
+        else {
+            return
+        }
+            correctAnswersVC.answers = incorrectAnsweredQuestions
+    }
+}
