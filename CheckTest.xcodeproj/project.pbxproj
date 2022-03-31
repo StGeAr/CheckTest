@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9FCCFA27F6285800A20399 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9FCCF927F6285800A20399 /* QuestionsViewController.swift */; };
 		5D7C694D27F06EC800FFD652 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694C27F06EC800FFD652 /* Question.swift */; };
 		5D7C694F27F06EEC00FFD652 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694E27F06EEC00FFD652 /* DataManager.swift */; };
 		63E7B03E27F3B9C000F1D41C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E7B03D27F3B9C000F1D41C /* Colors.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A9FCCF927F6285800A20399 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		5D7C694C27F06EC800FFD652 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5D7C694E27F06EEC00FFD652 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		63E7B03D27F3B9C000F1D41C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				DECD733D27EE53C000547C62 /* ViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
 				63E7B04A27F47B7E00F1D41C /* SettingsTableViewController.swift */,
+				0A9FCCF927F6285800A20399 /* QuestionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				DECD733E27EE53C000547C62 /* ViewController.swift in Sources */,
 				5D7C694F27F06EEC00FFD652 /* DataManager.swift in Sources */,
+				0A9FCCFA27F6285800A20399 /* QuestionsViewController.swift in Sources */,
 				5D7C694D27F06EC800FFD652 /* Question.swift in Sources */,
 				63E7B04B27F47B7E00F1D41C /* SettingsTableViewController.swift in Sources */,
 				DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */,
