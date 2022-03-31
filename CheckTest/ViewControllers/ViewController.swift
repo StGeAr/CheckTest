@@ -31,10 +31,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = Theme.currentTheme.backgroundColor
         settingTitle?.textColor = Theme.currentTheme.textColor
     }
-//    override func viewDidLayoutSubviews() {
-//
-//    }
 
-//    @IBAction func unwind(for segue: UIStoryboardSegue) {}
+    @IBAction func unwind(for segue: UIStoryboardSegue) {}
 }
 

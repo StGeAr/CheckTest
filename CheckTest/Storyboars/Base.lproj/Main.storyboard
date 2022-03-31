@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzr-Zd-2Pq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzr-Zd-2Pq">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="1734" y="-265"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="zrW-6A-u2R">
             <objects>
-                <viewController id="aN3-Zf-IRi" sceneMemberID="viewController">
+                <viewController id="aN3-Zf-IRi" customClass="ResultsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nL-Tm-KZy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,10 +241,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RfP-Nc-Irc">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="MIq-Dm-LWa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="MIq-Dm-LWa">
+                            <connections>
+                                <segue destination="fn1-OS-arD" kind="unwind" unwindAction="unwindFor:" id="bf2-0q-bh1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="correctAnswersButton" destination="HVv-hh-iHM" id="0oE-9w-Cra"/>
+                        <outlet property="resultNumberLabel" destination="7hO-WK-IeG" id="EoF-V6-u7c"/>
+                        <outlet property="resultTypeLabel" destination="bke-1N-BQT" id="BGC-4c-vfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tws-Dy-3Ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fn1-OS-arD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3286.875" y="535.56338028169012"/>
         </scene>
@@ -272,10 +282,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Correct answers" id="Ntp-Wg-ALl">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="jAR-xu-v4A"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="jAR-xu-v4A">
+                            <connections>
+                                <segue destination="zbk-q3-UR3" kind="unwind" unwindAction="unwindFor:" id="QgN-fU-OKH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CT0-LZ-vin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zbk-q3-UR3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5109" y="536"/>
         </scene>
