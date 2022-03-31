@@ -21,6 +21,7 @@
 		DECD734127EE53C000547C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD733F27EE53C000547C62 /* Main.storyboard */; };
 		DECD734327EE53C100547C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DECD734227EE53C100547C62 /* Assets.xcassets */; };
 		DECD734627EE53C100547C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD734427EE53C100547C62 /* LaunchScreen.storyboard */; };
+		DEFFE59827F6237F008AA3CC /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFE59727F6237F008AA3CC /* ResultsViewController.swift */; };
 		ED5836E127F06AB00082FD8F /* RightAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		DECD734227EE53C100547C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DECD734527EE53C100547C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DECD734727EE53C100547C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEFFE59727F6237F008AA3CC /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			children = (
 				63E7B04827F4776000F1D41C /* DevelopersViewController.swift */,
 				DECD733D27EE53C000547C62 /* ViewController.swift */,
+				DEFFE59727F6237F008AA3CC /* ResultsViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
 				63E7B04A27F47B7E00F1D41C /* SettingsTableViewController.swift */,
 			);
@@ -233,6 +236,7 @@
 				63E7B04027F3BEF400F1D41C /* LightTheme.swift in Sources */,
 				63E7B04527F3BF9C00F1D41C /* Theme.swift in Sources */,
 				63E7B04227F3BF0500F1D41C /* DrakTheme.swift in Sources */,
+				DEFFE59827F6237F008AA3CC /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
