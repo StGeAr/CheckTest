@@ -9,11 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var settingTitle: UILabel!
+    
+    @IBOutlet weak var startButton: UIButton! {
+        didSet {
+            startButton.layer.cornerRadius = 5
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+  }
+  
+    override func viewWillAppear(_ animated: Bool) {
+        setupTheme()
     }
+    
+    func setupTheme() {
+        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        settingTitle?.textColor = Theme.currentTheme.textColor
+    }
+//    override func viewDidLayoutSubviews() {
+//
+//    }
 
-
+//    @IBAction func unwind(for segue: UIStoryboardSegue) {}
 }
 
