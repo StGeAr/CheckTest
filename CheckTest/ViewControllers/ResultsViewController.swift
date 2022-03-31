@@ -89,6 +89,6 @@ extension ResultsViewController {
         else {
             return
         }
-            correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestions
+            correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestionNumbers
     }
 }

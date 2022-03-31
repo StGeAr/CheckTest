@@ -83,7 +83,7 @@
         <!--Question №-->
         <scene sceneID="aRr-wV-gwL">
             <objects>
-                <viewController id="cU9-Or-rfo" sceneMemberID="viewController">
+                <viewController id="cU9-Or-rfo" customClass="QuestionsViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHf-fs-K45">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,16 +107,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="aUW-5m-FrD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-mV-s2x">
                                                 <rect key="frame" x="0.0" y="55" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="kB2-mF-Sdd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-ng-xB8">
                                                 <rect key="frame" x="0.0" y="110" width="280" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="saV-am-gD4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -136,13 +145,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question №" id="dgH-gV-qak">
                         <barButtonItem key="backBarButtonItem" title="Back" id="GPX-E2-gFr"/>
-                        <barButtonItem key="rightBarButtonItem" title="костыль" id="hGH-jf-R5C">
-                            <connections>
-                                <segue destination="aN3-Zf-IRi" kind="show" id="9W7-HG-dDp"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="questionLabel" destination="pFM-zg-nb4" id="a23-9t-LHg"/>
+                        <outlet property="questionProgressLine" destination="Mnd-pq-YDI" id="y76-uz-slZ"/>
+                        <outletCollection property="buttons" destination="I2Q-mV-s2x" collectionClass="NSMutableArray" id="Glj-3N-uRg"/>
+                        <outletCollection property="buttons" destination="dWP-qD-Ekw" collectionClass="NSMutableArray" id="P6t-SP-2Db"/>
+                        <outletCollection property="buttons" destination="1eO-ng-xB8" collectionClass="NSMutableArray" id="ydJ-JN-Kmr"/>
                         <segue destination="aN3-Zf-IRi" kind="show" identifier="showResult" id="Et7-SH-zIP"/>
                     </connections>
                 </viewController>
@@ -221,9 +230,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-hh-iHM">
-                                <rect key="frame" x="84" y="473" width="152" height="30"/>
+                                <rect key="frame" x="43" y="470" width="234" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Show correct answers"/>
+                                <state key="normal" title="Показать правильные ответы"/>
                                 <connections>
                                     <segue destination="GWg-bK-cam" kind="presentation" modalPresentationStyle="fullScreen" id="Tcb-Ls-KIT"/>
                                 </connections>
@@ -258,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="3286.875" y="535.56338028169012"/>
         </scene>
-        <!--Correct answers-->
+        <!--Правильные ответы-->
         <scene sceneID="ROA-qw-jbF">
             <objects>
-                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersViewController.swift" sceneMemberID="viewController">
+                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KcW-fc-AJL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +291,7 @@
                             <outlet property="delegate" destination="GVI-pE-GAP" id="QeH-j2-4S2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Correct answers" id="Ntp-Wg-ALl">
+                    <navigationItem key="navigationItem" title="Правильные ответы" id="Ntp-Wg-ALl">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="jAR-xu-v4A">
                             <connections>
                                 <segue destination="zbk-q3-UR3" kind="unwind" unwindAction="unwindFor:" id="QgN-fU-OKH"/>
@@ -506,9 +516,6 @@
             <point key="canvasLocation" x="1736" y="536"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Et7-SH-zIP"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
