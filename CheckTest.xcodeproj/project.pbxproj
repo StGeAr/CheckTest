@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5D7C694D27F06EC800FFD652 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694C27F06EC800FFD652 /* Question.swift */; };
 		5D7C694F27F06EEC00FFD652 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694E27F06EEC00FFD652 /* DataManager.swift */; };
+		63E7B03E27F3B9C000F1D41C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E7B03D27F3B9C000F1D41C /* Colors.xcassets */; };
+		63E7B04027F3BEF400F1D41C /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E7B03F27F3BEF400F1D41C /* LightTheme.swift */; };
+		63E7B04227F3BF0500F1D41C /* DrakTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E7B04127F3BF0500F1D41C /* DrakTheme.swift */; };
+		63E7B04527F3BF9C00F1D41C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E7B04427F3BF9C00F1D41C /* Theme.swift */; };
+		63E7B04927F4776000F1D41C /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E7B04827F4776000F1D41C /* DevelopersViewController.swift */; };
+		63E7B04B27F47B7E00F1D41C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E7B04A27F47B7E00F1D41C /* SettingsTableViewController.swift */; };
 		DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733927EE53C000547C62 /* AppDelegate.swift */; };
 		DECD733C27EE53C000547C62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733B27EE53C000547C62 /* SceneDelegate.swift */; };
 		DECD733E27EE53C000547C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD733D27EE53C000547C62 /* ViewController.swift */; };
@@ -21,6 +27,12 @@
 /* Begin PBXFileReference section */
 		5D7C694C27F06EC800FFD652 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5D7C694E27F06EEC00FFD652 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		63E7B03D27F3B9C000F1D41C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		63E7B03F27F3BEF400F1D41C /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		63E7B04127F3BF0500F1D41C /* DrakTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrakTheme.swift; sourceTree = "<group>"; };
+		63E7B04427F3BF9C00F1D41C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		63E7B04827F4776000F1D41C /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevelopersViewController.swift; path = CheckTest/ViewControllers/DevelopersViewController.swift; sourceTree = SOURCE_ROOT; };
+		63E7B04A27F47B7E00F1D41C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		DECD733627EE53C000547C62 /* CheckTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECD733927EE53C000547C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DECD733B27EE53C000547C62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E7B04327F3BF5100F1D41C /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				63E7B03F27F3BEF400F1D41C /* LightTheme.swift */,
+				63E7B04127F3BF0500F1D41C /* DrakTheme.swift */,
+				63E7B04427F3BF9C00F1D41C /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		DECD732D27EE53C000547C62 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +84,7 @@
 		DECD733827EE53C000547C62 /* CheckTest */ = {
 			isa = PBXGroup;
 			children = (
+				63E7B04327F3BF5100F1D41C /* Theme */,
 				DECD734D27EE544800547C62 /* Storyboars */,
 				DECD734E27EE546500547C62 /* ViewControllers */,
 				DECD735127EE549900547C62 /* Models */,
@@ -84,10 +107,12 @@
 		DECD734E27EE546500547C62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63E7B04827F4776000F1D41C /* DevelopersViewController.swift */,
 				5D7C694C27F06EC800FFD652 /* Question.swift */,
 				5D7C694E27F06EEC00FFD652 /* DataManager.swift */,
 				DECD733D27EE53C000547C62 /* ViewController.swift */,
 				ED5836E027F06AB00082FD8F /* RightAnswersViewController.swift */,
+				63E7B04A27F47B7E00F1D41C /* SettingsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,6 +130,7 @@
 		DECD735027EE548100547C62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63E7B03D27F3B9C000F1D41C /* Colors.xcassets */,
 				DECD734227EE53C100547C62 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -183,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DECD734627EE53C100547C62 /* LaunchScreen.storyboard in Resources */,
+				63E7B03E27F3B9C000F1D41C /* Colors.xcassets in Resources */,
 				DECD734327EE53C100547C62 /* Assets.xcassets in Resources */,
 				DECD734127EE53C000547C62 /* Main.storyboard in Resources */,
 			);
@@ -198,9 +225,14 @@
 				DECD733E27EE53C000547C62 /* ViewController.swift in Sources */,
 				5D7C694F27F06EEC00FFD652 /* DataManager.swift in Sources */,
 				5D7C694D27F06EC800FFD652 /* Question.swift in Sources */,
+				63E7B04B27F47B7E00F1D41C /* SettingsTableViewController.swift in Sources */,
 				DECD733A27EE53C000547C62 /* AppDelegate.swift in Sources */,
 				ED5836E127F06AB00082FD8F /* RightAnswersViewController.swift in Sources */,
+				63E7B04927F4776000F1D41C /* DevelopersViewController.swift in Sources */,
 				DECD733C27EE53C000547C62 /* SceneDelegate.swift in Sources */,
+				63E7B04027F3BEF400F1D41C /* LightTheme.swift in Sources */,
+				63E7B04527F3BF9C00F1D41C /* Theme.swift in Sources */,
+				63E7B04227F3BF0500F1D41C /* DrakTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
