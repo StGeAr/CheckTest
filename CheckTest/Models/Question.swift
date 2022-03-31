@@ -25,7 +25,7 @@ extension Question {
         let answers = DataManager.shared.answers
         let correctAnswers = DataManager.shared.correctAnswers
         
-        for index in 0..<DataManager.shared.titles.count {
+        for index in 0..<titles.count {
             let question = Question(
                 title: titles[index],
                 answers: [
