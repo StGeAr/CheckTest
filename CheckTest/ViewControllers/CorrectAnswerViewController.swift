@@ -30,7 +30,8 @@ class CorrectAnswerViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showCorrectAnswers", for: indexPath)
         
-        let question = questions[indexPath.section]
+//        let question = questions[indexPath.section]
+        let question = questions[incorrectAnsweredQuestionNumbers[indexPath.section]]
         
         var content = cell.defaultContentConfiguration()
         
