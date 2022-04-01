@@ -50,3 +50,4 @@ class RightAnswersViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
 }
+

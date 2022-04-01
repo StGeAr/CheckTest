@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="544" width="320" height="4"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="0Dl-UP-vq9">
-                                <rect key="frame" x="20" y="223.5" width="280" height="250.5"/>
+                                <rect key="frame" x="20" y="178.5" width="280" height="295.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-zg-nb4">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
@@ -101,28 +101,47 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Cvy-9I-gww">
-                                        <rect key="frame" x="0.0" y="110.5" width="280" height="140"/>
+                                        <rect key="frame" x="0.0" y="110.5" width="280" height="185"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWP-qD-Ekw">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.20392156859999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Sa6-7l-fRA"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="qOH-yR-WIi"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="aUW-5m-FrD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-mV-s2x">
-                                                <rect key="frame" x="0.0" y="55" width="280" height="30"/>
+                                                <rect key="frame" x="0.0" y="70" width="280" height="45"/>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.20392156859999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="lyc-Po-yLR"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="kB2-mF-Sdd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-ng-xB8">
-                                                <rect key="frame" x="0.0" y="110" width="280" height="30"/>
+                                                <rect key="frame" x="0.0" y="140" width="280" height="45"/>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.20392156859999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="mU8-jn-cnI"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonPressed:" destination="cU9-Or-rfo" eventType="touchUpInside" id="saV-am-gD4"/>
                                                 </connections>
@@ -147,6 +166,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="GPX-E2-gFr"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="button1" destination="dWP-qD-Ekw" id="3MD-wd-6YP"/>
                         <outlet property="questionLabel" destination="pFM-zg-nb4" id="a23-9t-LHg"/>
                         <outlet property="questionProgressLine" destination="Mnd-pq-YDI" id="y76-uz-slZ"/>
                         <outletCollection property="buttons" destination="I2Q-mV-s2x" collectionClass="NSMutableArray" id="Glj-3N-uRg"/>
@@ -231,9 +251,12 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-hh-iHM">
                                 <rect key="frame" x="43" y="470" width="234" height="33"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.20392156859999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Показать правильные ответы"/>
+                                <state key="normal" title="Показать правильные ответы">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="GWg-bK-cam" kind="presentation" modalPresentationStyle="fullScreen" id="Tcb-Ls-KIT"/>
                                 </connections>

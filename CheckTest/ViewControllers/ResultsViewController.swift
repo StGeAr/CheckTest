@@ -15,6 +15,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet var correctAnswersButton: UIButton! {
         didSet {
             correctAnswersButton.isHidden = true
+            correctAnswersButton.layer.cornerRadius = 5
         }
     }
     
@@ -50,6 +51,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         updateResultInfo()
+        setupTheme()
     }
 }
 
@@ -90,5 +92,14 @@ extension ResultsViewController {
             return
         }
             correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestionNumbers
+    }
+}
+
+// MARK: - Design
+extension ResultsViewController {
+    func setupTheme() {
+        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        resultTypeLabel?.textColor = Theme.currentTheme.textColor
+        resultNumberLabel.textColor = Theme.currentTheme.textColor
     }
 }

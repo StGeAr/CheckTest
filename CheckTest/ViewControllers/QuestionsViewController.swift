@@ -13,6 +13,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressLine: UIProgressView!
+    @IBOutlet weak var button1: UIButton!
     
     //MARK: - Private properties
     private let questions = Question.getQuestion()
@@ -25,7 +26,11 @@ class QuestionsViewController: UIViewController {
     //MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in buttons {
+       button.layer.cornerRadius = 5
+        }
         updateUI()
+        setupTheme()
     }
     
     // MARK: - IBActions
@@ -72,3 +77,10 @@ extension QuestionsViewController {
     }
 }
 
+// MARK: - Design
+extension QuestionsViewController {
+    func setupTheme() {
+        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        questionLabel?.textColor = Theme.currentTheme.textColor
+    }
+}
