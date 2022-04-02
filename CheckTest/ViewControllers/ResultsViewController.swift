@@ -60,7 +60,10 @@ extension ResultsViewController {
     private func updateResultInfo() {
         let currentAnswers = answersChosen.compactMap { $0.title }
         if currentAnswers == correctAnswers {
-            resultTypeLabel.text = "Поздравляем! Вы ответили на все вопросы!"
+            resultTypeLabel.text = """
+            Поздравляем!
+            Вы молодец!
+            """
             resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
         } else {
             var answers: [String] = []
@@ -71,7 +74,10 @@ extension ResultsViewController {
                 }
             }
 
-            resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
+            resultTypeLabel.text = """
+            Упс!
+            Вам необходимо повторить теорию!
+            """
             resultNumberLabel.text = "Верно \(answers.count) из \(correctAnswers.count)"
             correctAnswersButton.isHidden = false
         }
