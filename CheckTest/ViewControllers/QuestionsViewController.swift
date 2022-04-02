@@ -27,7 +27,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         for button in buttons {
-       button.layer.cornerRadius = 5
+            button.layer.cornerRadius = 10
         }
         updateUI()
         setupTheme()
@@ -80,7 +80,7 @@ extension QuestionsViewController {
 // MARK: - Design
 extension QuestionsViewController {
     func setupTheme() {
-        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         questionLabel?.textColor = Theme.currentTheme.textColor
         navigationController?.navigationBar.largeTitleTextAttributes =
         [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor

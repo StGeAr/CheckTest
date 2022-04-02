@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
 
 
     @IBOutlet weak var settingTitle: UILabel!
     
     @IBOutlet weak var startButton: UIButton! {
         didSet {
-            startButton.layer.cornerRadius = 5
+            startButton.layer.cornerRadius = 10
         }
     }
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     func setupTheme() {
-        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         settingTitle?.textColor = Theme.currentTheme.textColor
     }
 

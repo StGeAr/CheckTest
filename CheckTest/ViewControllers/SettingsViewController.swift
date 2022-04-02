@@ -16,22 +16,19 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    switchTheme.isOn = UserDefaults.standard.bool(forKey: "DarkTheme")
+        switchTheme.isOn = UserDefaults.standard.bool(forKey: "DarkTheme")
         setupTheme()
     }
 
 
     func setupTheme() {
-        
-        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         settingTitle?.textColor = Theme.currentTheme.textColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor]
     }
     
     
     @IBAction func changeAction(_ sender: UISwitch) {
-        
         Theme.currentTheme = sender.isOn ? DarkTheme() : LightTheme()
         setupTheme()
         UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")

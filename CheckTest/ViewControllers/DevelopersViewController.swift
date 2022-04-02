@@ -32,7 +32,7 @@ class DevelopersViewController: UIViewController {
     }
 
     func setupTheme() {
-        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         devTitle?.textColor = Theme.currentTheme.textColor
         
         for name in autorsName {

@@ -11,8 +11,8 @@ class RightAnswersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = Theme.currentTheme.backgroundColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor]
+        setupTheme()
+       
     }
     
     //MARK: - Public properties
@@ -27,6 +27,13 @@ class RightAnswersViewController: UITableViewController {
         override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             let questionNumber = incorrectAnsweredQuestionNumbers[section] + 1
             return "Вопрос №\(questionNumber)"
+            
+        }
+    
+        override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+            if let headerView = view as? UITableViewHeaderFooterView {
+                headerView.textLabel?.textColor = .red
+                }
         }
             
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +42,7 @@ class RightAnswersViewController: UITableViewController {
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "showCorrectAnswers", for: indexPath)
-            
-            cell.backgroundColor = Theme.currentTheme.backgroundColor
-            
-        
             let question = questions[incorrectAnsweredQuestionNumbers[indexPath.section]]
-            
             var content = cell.defaultContentConfiguration()
             
             switch indexPath.row {
@@ -49,6 +51,10 @@ class RightAnswersViewController: UITableViewController {
             default:
                 content.text = "Правильный ответ: \(question.correctAnswer)"
             }
+            
+            content.textProperties.color = Theme.currentTheme.textColor
+            cell.backgroundColor = Theme.currentTheme.backgroundColor
+            cell.selectionStyle = .none
             
             cell.contentConfiguration = content
             
@@ -61,16 +67,15 @@ class RightAnswersViewController: UITableViewController {
     
 }
 
-//// MARK: - Design
-//extension QuestionsViewController {
-//    func setupTheme() {
-//        self.view.backgroundColor = Theme.currentTheme.backgroundColor
-//        questionLabel?.textColor = Theme.currentTheme.textColor
-//        navigationController?.navigationBar.largeTitleTextAttributes =
-//        [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
-//        ]
-//    }
-//}
+// MARK: - Design
+extension RightAnswersViewController {
+    func setupTheme() {
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        ]
+    }
+}
 
 
 

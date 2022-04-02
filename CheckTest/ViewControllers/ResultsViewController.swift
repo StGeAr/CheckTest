@@ -15,7 +15,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet var correctAnswersButton: UIButton! {
         didSet {
             correctAnswersButton.isHidden = true
-            correctAnswersButton.layer.cornerRadius = 5
+            correctAnswersButton.layer.cornerRadius = 10
         }
     }
     
@@ -98,7 +98,7 @@ extension ResultsViewController {
 // MARK: - Design
 extension ResultsViewController {
     func setupTheme() {
-        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         resultTypeLabel?.textColor = Theme.currentTheme.textColor
         resultNumberLabel.textColor = Theme.currentTheme.textColor
     }
