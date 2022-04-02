@@ -8,12 +8,9 @@
 import UIKit
 
 class DevelopersViewController: UIViewController {
-
-   
-    @IBOutlet weak var devTitle: UILabel!
     
+    //MARK: - IBOutlets
     @IBOutlet var autorsName: [UILabel]!
-    
     @IBOutlet var imageMultipleViews: [UIImageView]! {
         didSet {
             for image in imageMultipleViews {
@@ -22,21 +19,22 @@ class DevelopersViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-     
-    }
-    
+    //MARK: - Life cycles methods
     override func viewWillAppear(_ animated: Bool) {
         setupTheme()
     }
+}
 
-    func setupTheme() {
-        view.backgroundColor = Theme.currentTheme.backgroundColor
-        devTitle?.textColor = Theme.currentTheme.textColor
-        
+// MARK: - Design
+extension DevelopersViewController {
+    private func setupTheme() {
         for name in autorsName {
             name.textColor = Theme.currentTheme.textColor
         }
+        
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        ]
     }
 }

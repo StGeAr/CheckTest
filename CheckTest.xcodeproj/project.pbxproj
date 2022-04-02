@@ -59,14 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63E7B04327F3BF5100F1D41C /* Theme */ = {
+		63E7B04327F3BF5100F1D41C /* Themes */ = {
 			isa = PBXGroup;
 			children = (
 				63E7B03F27F3BEF400F1D41C /* LightTheme.swift */,
 				63E7B04127F3BF0500F1D41C /* DrakTheme.swift */,
 				63E7B04427F3BF9C00F1D41C /* Theme.swift */,
 			);
-			path = Theme;
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		DECD732D27EE53C000547C62 = {
@@ -88,11 +88,11 @@
 		DECD733827EE53C000547C62 /* CheckTest */ = {
 			isa = PBXGroup;
 			children = (
-				63E7B04327F3BF5100F1D41C /* Theme */,
 				DECD734D27EE544800547C62 /* Storyboars */,
 				DECD734E27EE546500547C62 /* ViewControllers */,
 				DECD735127EE549900547C62 /* Models */,
 				DECD735227EE55C500547C62 /* Services */,
+				63E7B04327F3BF5100F1D41C /* Themes */,
 				DECD735027EE548100547C62 /* Resources */,
 				DECD734F27EE547900547C62 /* App */,
 			);

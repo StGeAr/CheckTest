@@ -103,7 +103,7 @@ extension ResultsViewController {
 
 // MARK: - Design
 extension ResultsViewController {
-    func setupTheme() {
+    private func setupTheme() {
         view.backgroundColor = Theme.currentTheme.backgroundColor
         resultTypeLabel?.textColor = Theme.currentTheme.textColor
         resultNumberLabel.textColor = Theme.currentTheme.textColor

@@ -67,7 +67,7 @@ class RightAnswersTableViewController: UITableViewController {
 
 // MARK: - Design
 extension RightAnswersTableViewController {
-    func setupTheme() {
+    private func setupTheme() {
         view.backgroundColor = Theme.currentTheme.backgroundColor
         navigationController?.navigationBar.standardAppearance.backgroundColor = Theme.currentTheme.backgroundColor
         
