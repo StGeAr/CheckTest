@@ -12,7 +12,6 @@ class RightAnswersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTheme()
-       
     }
     
     //MARK: - Public properties
@@ -71,7 +70,13 @@ class RightAnswersViewController: UITableViewController {
 extension RightAnswersViewController {
     func setupTheme() {
         view.backgroundColor = Theme.currentTheme.backgroundColor
-        navigationController?.navigationBar.largeTitleTextAttributes = [
+        navigationController?.navigationBar.standardAppearance.backgroundColor = Theme.currentTheme.backgroundColor
+        
+        navigationController?.navigationBar.standardAppearance.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        ]
+        
+        navigationController?.navigationBar.standardAppearance.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
         ]
     }
