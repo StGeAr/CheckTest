@@ -8,7 +8,13 @@
 import UIKit
 
 class RightAnswersViewController: UITableViewController {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.backgroundColor = Theme.currentTheme.backgroundColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor]
+    }
+    
     //MARK: - Public properties
         var incorrectAnsweredQuestionNumbers: [Int]!
         let questions = Question.getQuestion()
@@ -30,6 +36,9 @@ class RightAnswersViewController: UITableViewController {
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "showCorrectAnswers", for: indexPath)
             
+            cell.backgroundColor = Theme.currentTheme.backgroundColor
+            
+        
             let question = questions[incorrectAnsweredQuestionNumbers[indexPath.section]]
             
             var content = cell.defaultContentConfiguration()
@@ -49,5 +58,19 @@ class RightAnswersViewController: UITableViewController {
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
         }
+    
 }
+
+//// MARK: - Design
+//extension QuestionsViewController {
+//    func setupTheme() {
+//        self.view.backgroundColor = Theme.currentTheme.backgroundColor
+//        questionLabel?.textColor = Theme.currentTheme.textColor
+//        navigationController?.navigationBar.largeTitleTextAttributes =
+//        [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+//        ]
+//    }
+//}
+
+
 

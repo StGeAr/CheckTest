@@ -82,7 +82,8 @@ extension QuestionsViewController {
     func setupTheme() {
         self.view.backgroundColor = Theme.currentTheme.backgroundColor
         questionLabel?.textColor = Theme.currentTheme.textColor
-        navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        navigationController?.navigationBar.largeTitleTextAttributes =
+        [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
         ]
     }
 }
