@@ -15,6 +15,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet var correctAnswersButton: UIButton! {
         didSet {
             correctAnswersButton.isHidden = true
+            correctAnswersButton.layer.cornerRadius = 10
         }
     }
     
@@ -50,6 +51,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         updateResultInfo()
+        setupTheme()
     }
 }
 
@@ -58,7 +60,10 @@ extension ResultsViewController {
     private func updateResultInfo() {
         let currentAnswers = answersChosen.compactMap { $0.title }
         if currentAnswers == correctAnswers {
-            resultTypeLabel.text = "Поздравляем! Вы ответили на все вопросы!"
+            resultTypeLabel.text = """
+            Поздравляем!
+            Вы молодец!
+            """
             resultNumberLabel.text = "Верно \(currentAnswers.count) из \(correctAnswers.count)"
         } else {
             var answers: [String] = []
@@ -69,7 +74,10 @@ extension ResultsViewController {
                 }
             }
 
-            resultTypeLabel.text = "Упс! Вам необходимо повторить теорию!"
+            resultTypeLabel.text = """
+            Упс!
+            Вам необходимо повторить теорию!
+            """
             resultNumberLabel.text = "Верно \(answers.count) из \(correctAnswers.count)"
             correctAnswersButton.isHidden = false
         }
@@ -85,10 +93,19 @@ extension ResultsViewController {
             return
         }
         guard
-            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
+            let correctAnswersVC = navigationVC.topViewController as? RightAnswersTableViewController
         else {
             return
         }
             correctAnswersVC.incorrectAnsweredQuestionNumbers = incorrectAnsweredQuestionNumbers
+    }
+}
+
+// MARK: - Design
+extension ResultsViewController {
+    private func setupTheme() {
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        resultTypeLabel?.textColor = Theme.currentTheme.textColor
+        resultNumberLabel.textColor = Theme.currentTheme.textColor
     }
 }

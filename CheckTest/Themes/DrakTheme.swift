@@ -11,5 +11,6 @@ class DarkTheme: ThemeProtocol {
     
     var backgroundColor: UIColor = UIColor(named: "backgroundDark")!
     var textColor: UIColor = UIColor(named: "textColorDark")!
+    var accentColor:UIColor = UIColor(named: "accentColorDark")!
     
 }

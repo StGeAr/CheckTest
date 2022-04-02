@@ -13,6 +13,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressLine: UIProgressView!
+    @IBOutlet weak var button1: UIButton!
     
     //MARK: - Private properties
     private let questions = Question.getQuestion()
@@ -25,7 +26,11 @@ class QuestionsViewController: UIViewController {
     //MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in buttons {
+            button.layer.cornerRadius = 10
+        }
         updateUI()
+        setupTheme()
     }
     
     // MARK: - IBActions
@@ -43,6 +48,7 @@ extension QuestionsViewController {
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.title
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        
         let totalProgress = Float(questionIndex) / Float(questions.count)
         questionProgressLine.setProgress(totalProgress, animated: true)
         showCurrentAnswers(with: currentAnswers)
@@ -72,3 +78,12 @@ extension QuestionsViewController {
     }
 }
 
+// MARK: - Design
+extension QuestionsViewController {
+    private func setupTheme() {
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        questionLabel?.textColor = Theme.currentTheme.textColor
+        navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        ]
+    }
+}
