@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController {
     @IBAction func changeAction(_ sender: UISwitch) {
         Theme.currentTheme = sender.isOn ? DarkTheme() : LightTheme()
         setupTheme()
-        UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")
+        UserDefaults.standard.set(sender.isOn, forKey: "DarkTheme")
         
     }
 
