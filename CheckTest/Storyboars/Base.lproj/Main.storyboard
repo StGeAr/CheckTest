@@ -99,8 +99,8 @@
                                 <rect key="frame" x="20" y="150" width="335" height="534"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какого устройста нет в блоке БУФТ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-zg-nb4">
-                                        <rect key="frame" x="58.666666666666671" y="0.0" width="217.66666666666663" height="259"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="35" y="0.0" width="265.33333333333331" height="259"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -358,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CT0-LZ-vin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="zbk-q3-UR3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5109" y="536"/>
+            <point key="canvasLocation" x="5108" y="535.71428571428578"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="355-9o-Dp3">
