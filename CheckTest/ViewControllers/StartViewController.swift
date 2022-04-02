@@ -8,8 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
-
+    
     @IBOutlet weak var settingTitle: UILabel!
     
     @IBOutlet weak var startButton: UIButton! {

@@ -87,7 +87,7 @@ extension ResultsViewController {
             return
         }
         guard
-            let correctAnswersVC = navigationVC.topViewController as? RightAnswersViewController
+            let correctAnswersVC = navigationVC.topViewController as? RightAnswersTableViewController
         else {
             return
         }

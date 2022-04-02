@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RightAnswersViewController: UITableViewController {
+class RightAnswersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class RightAnswersViewController: UITableViewController {
 }
 
 // MARK: - Design
-extension RightAnswersViewController {
+extension RightAnswersTableViewController {
     func setupTheme() {
         view.backgroundColor = Theme.currentTheme.backgroundColor
         navigationController?.navigationBar.standardAppearance.backgroundColor = Theme.currentTheme.backgroundColor

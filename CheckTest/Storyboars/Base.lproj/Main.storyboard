@@ -246,14 +246,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-aQ-eMR">
-                                <rect key="frame" x="16" y="363" width="343" height="86.333333333333314"/>
+                                <rect key="frame" x="16" y="354.66666666666669" width="343" height="102.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bke-1N-BQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="37.333333333333336"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
-                                                    <font key="NSFont" size="23" name="JetBrainsMonoRoman-Bold"/>
+                                                    <font key="NSFont" size="32" name="JetBrainsMonoRoman-Bold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -261,11 +261,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hO-WK-IeG">
-                                        <rect key="frame" x="0.0" y="63.000000000000007" width="343" height="23.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="73.333333333333314" width="343" height="29.333333333333329"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
-                                                    <font key="NSFont" size="20" name="JetBrainsMono-Regular"/>
+                                                    <font key="NSFont" size="25" name="JetBrainsMono-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -326,7 +326,7 @@
         <!--Правильные ответы-->
         <scene sceneID="ROA-qw-jbF">
             <objects>
-                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GVI-pE-GAP" customClass="RightAnswersTableViewController" customModule="CheckTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KcW-fc-AJL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

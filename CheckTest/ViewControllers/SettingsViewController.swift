@@ -24,7 +24,9 @@ class SettingsViewController: UIViewController {
     func setupTheme() {
         view.backgroundColor = Theme.currentTheme.backgroundColor
         settingTitle?.textColor = Theme.currentTheme.textColor
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor]
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Theme.currentTheme.textColor
+        ]
     }
     
     
@@ -32,7 +34,6 @@ class SettingsViewController: UIViewController {
         Theme.currentTheme = sender.isOn ? DarkTheme() : LightTheme()
         setupTheme()
         UserDefaults.standard.set(sender.isOn, forKey: "DarkTheme")
-        
     }
 
 }
